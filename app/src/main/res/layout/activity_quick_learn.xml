@@ -14,18 +14,33 @@
         android:background="@drawable/background"
         android:id="@+id/rl">
 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:text="Gempa Bumi"
+            android:textAlignment="center"
+            android:textColor="@color/colorContent"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
         <ImageButton
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/warning1"
-            android:layout_marginLeft="310dp"
-            />
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Show Popup Window"
-            />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/warning1" />
     </RelativeLayout>
 
     <LinearLayout
@@ -44,9 +59,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="@color/colorContentQ">
+            android:background="@color/colorContentQ"
+            >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/popUp"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -65,11 +81,11 @@
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btn_audio"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/sound" />
@@ -84,6 +100,7 @@
             android:background="@color/colorContentQ1">
 
             <ImageView
+                android:id="@+id/popUp1"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
@@ -101,10 +118,11 @@
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
-            <ImageButton
+            <ImageView
+                android:id="@+id/btn_audio1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/sound" />
@@ -119,6 +137,7 @@
             android:background="@color/colorContentQ">
 
             <ImageView
+                android:id="@+id/popUp2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
@@ -136,10 +155,11 @@
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
-            <ImageButton
+            <ImageView
+                android:id="@+id/btn_audio2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/sound" />
@@ -155,6 +175,7 @@
             android:background="@color/colorContentQ1">
 
             <ImageView
+                android:id="@+id/popUp3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
@@ -172,10 +193,11 @@
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
-            <ImageButton
+            <ImageView
+                android:id="@+id/btn_audio3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/sound" />
@@ -191,6 +213,7 @@
             android:background="@color/colorContentQ">
 
             <ImageView
+                android:id="@+id/popUp4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginLeft="10dp"
@@ -208,10 +231,11 @@
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
-            <ImageButton
+            <ImageView
+                android:id="@+id/btn_audio4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/sound" />
