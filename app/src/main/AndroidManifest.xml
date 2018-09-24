@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".QuickLearnAudio" />
-        <activity android:name=".TanyaJawab"></activity>
+        <activity android:name=".TanyaJawab" />
+        <activity android:name=".Activity_Dashboard_Quick" />
+        <activity android:name=".Activity_Dashboard_Learn"></activity>
     </application>
 
 </manifest>
