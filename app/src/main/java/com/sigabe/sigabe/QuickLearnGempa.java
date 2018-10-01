@@ -1,23 +1,15 @@
 package com.sigabe.sigabe;
 
-import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class QuickLearn extends AppCompatActivity {
+public class QuickLearnGempa extends AppCompatActivity {
 
     private PopupWindow mPopupWindow;
     @Override
@@ -39,7 +31,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowAudio1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_quick_learn_audio);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -58,7 +50,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowMateri1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_pop_up);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -79,7 +71,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowAudio2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_quick_learn_audio);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -98,7 +90,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowMateri2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_pop_up);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -119,7 +111,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowAudio3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_quick_learn_audio);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -138,7 +130,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowMateri3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_pop_up);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -158,7 +150,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowAudio4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_quick_learn_audio);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -177,7 +169,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowMateri4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_pop_up);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -198,7 +190,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowAudio5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_quick_learn_audio);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);
@@ -217,7 +209,7 @@ public class QuickLearn extends AppCompatActivity {
         btShowMateri5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(QuickLearn.this);
+                final Dialog dialog = new Dialog(QuickLearnGempa.this);
                 dialog.setContentView(R.layout.activity_pop_up);
                 dialog.setTitle("TWOH.Co");
                 TextView text = (TextView) dialog.findViewById(R.id.tv);

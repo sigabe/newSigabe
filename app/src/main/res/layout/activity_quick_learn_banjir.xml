@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuickLearnGempa"
-    android:weightSum="1"
-    >
+    tools:context=".QuickLearnBanjir">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,10 +22,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="20dp"
-            android:text="Gempa Bumi"
+            android:layout_centerHorizontal="true"
+            android:text="Banjir"
             android:textAlignment="center"
             android:textColor="@color/colorContent"
             android:textSize="28dp"
@@ -267,4 +263,5 @@
                 android:src="@drawable/sound" />
         </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>
