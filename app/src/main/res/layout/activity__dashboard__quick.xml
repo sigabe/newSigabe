@@ -52,7 +52,7 @@
                 android:background="@drawable/search"/>
 
             <EditText
-                android:layout_width="239dp"
+                android:layout_width="230dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
                 android:layout_alignParentEnd="true"
@@ -70,26 +70,26 @@
 
     <ImageButton
         android:id="@+id/btnGempa"
-        android:layout_width="116dp"
+        android:layout_width="113dp"
         android:layout_height="140dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="215dp"
         android:layout_marginLeft="7dp"
         android:background="@drawable/kate1"/>
 
     <ImageButton
         android:id="@+id/btnBanjir"
-        android:layout_width="116dp"
+        android:layout_width="113dp"
         android:layout_height="140dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="215dp"
         android:layout_marginLeft="7dp"
         android:layout_toRightOf="@id/btnGempa"
         android:background="@drawable/kate2"/>
 
     <ImageButton
         android:id="@+id/btnTornado"
-        android:layout_width="130dp"
+        android:layout_width="133dp"
         android:layout_height="140dp"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="215dp"
         android:layout_marginLeft="7dp"
         android:layout_marginRight="5dp"
         android:layout_toRightOf="@id/btnBanjir"
@@ -99,7 +99,7 @@
         android:id="@+id/btnTsunami"
         android:layout_width="115dp"
         android:layout_height="140dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="63dp"
         android:layout_below="@id/btnGempa"
         android:background="@drawable/kate4"/>
@@ -108,11 +108,59 @@
         android:id="@+id/btnKebakaran"
         android:layout_width="120dp"
         android:layout_height="140dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="63dp"
         android:layout_below="@id/btnGempa"
         android:layout_toRightOf="@id/btnTsunami"
         android:background="@drawable/kate5"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#13000000"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/btnBeranda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_home_black_24dp"/>
+
+            <ImageButton
+                android:id="@+id/btnCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/ic_call_black_24dp"/>
+
+            <ImageButton
+                android:id="@+id/btnPesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/ic_chat_black_24dp"/>
+
+            <ImageButton
+                android:id="@+id/btnKeluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/ic_lock_outline_black_24dp"/>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
 
 </RelativeLayout>
