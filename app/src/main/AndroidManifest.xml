@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+<<<<<<< HEAD
         <activity android:name=".QuickLearn" />
         <activity android:name=".QuickLearnAudio" />
         <activity android:name=".TanyaJawab" />
         <activity android:name=".Activity_Dashboard_Quick">
+=======
+        <activity android:name=".QuickLearnGempa">
+>>>>>>> 6da2447055c56adf8aed84649305fe5bf54108fe
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
