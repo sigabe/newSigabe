@@ -28,7 +28,7 @@ public class Activity_Dashboard_Quick extends AppCompatActivity {
         btnGempa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gempa = new Intent(Activity_Dashboard_Quick.this, QuickLearn.class);
+                Intent gempa = new Intent(Activity_Dashboard_Quick.this, QuickLearnGempa.class);
                 startActivity(gempa);
             }
         });
