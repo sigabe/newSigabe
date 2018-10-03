@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class Activity_Dashboard_Quick extends AppCompatActivity {
 
     Button btnQuick;
-    ImageButton btnGempa, btnCalling;
+    ImageButton btnGempa, btnCalling, btnMessage;
     EditText textSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,14 @@ public class Activity_Dashboard_Quick extends AppCompatActivity {
             public void onClick(View view) {
                 Intent calling = new Intent(Activity_Dashboard_Quick.this, Emergency_Call.class);
                 startActivity(calling);
+            }
+        });
+        btnMessage = (ImageButton) findViewById(R.id.btnPesan);
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pesan = new Intent(Activity_Dashboard_Quick.this, TanyaJawab.class);
+                startActivity(pesan);
             }
         });
 
