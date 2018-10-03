@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class Activity_Dashboard_Quick extends AppCompatActivity {
 
     Button btnQuick;
-    ImageButton btnGempa;
+    ImageButton btnGempa, btnCalling;
+    EditText textSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +30,19 @@ public class Activity_Dashboard_Quick extends AppCompatActivity {
         btnGempa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gempa = new Intent(Activity_Dashboard_Quick.this, QuickLearn.class);
+                Intent gempa = new Intent(Activity_Dashboard_Quick.this, QuickLearnGempa.class);
                 startActivity(gempa);
             }
         });
+        btnCalling = (ImageButton) findViewById(R.id.btnCall);
+        btnCalling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent calling = new Intent(Activity_Dashboard_Quick.this, Emergency_Call.class);
+                startActivity(calling);
+            }
+        });
+
+        textSearch = (EditText) findViewById(R.id.input);
     }
 }

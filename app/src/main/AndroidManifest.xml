@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sigabe.sigabe">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,21 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-<<<<<<< HEAD
-        <activity android:name=".QuickLearn" />
         <activity android:name=".QuickLearnAudio" />
         <activity android:name=".TanyaJawab" />
         <activity android:name=".Activity_Dashboard_Quick">
-=======
-        <activity android:name=".QuickLearnGempa">
->>>>>>> 6da2447055c56adf8aed84649305fe5bf54108fe
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".QuickLearnGempa" />
         <activity android:name=".Activity_Dashboard_Learn" />
+        <activity android:name=".Emergency_Call"></activity>
     </application>
 
 </manifest>
