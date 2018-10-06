@@ -1,56 +1,49 @@
 package com.sigabe.sigabe;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-public class Activity_Dashboard_Quick extends AppCompatActivity {
+public class Activity_Dashboard_Quick extends Fragment{
 
     Button btnQuick;
     ImageButton btnGempa, btnCalling, btnMessage;
     EditText textSearch;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__dashboard__quick);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle saveInstance){
+        return inflater.inflate(R.layout.activity__dashboard__quick,null );
+    }
 
-        btnQuick = (Button)findViewById(R.id.btnHelp);
-        btnQuick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent learn = new Intent(Activity_Dashboard_Quick.this, Activity_Dashboard_Learn.class);
-                startActivity(learn);
-            }
-        });
-        btnGempa = (ImageButton) findViewById(R.id.btnGempa);
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        btnGempa = (ImageButton)view.findViewById(R.id.btnGempa);
+        btnQuick = (Button)view.findViewById(R.id.btnHelp);
+
         btnGempa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gempa = new Intent(Activity_Dashboard_Quick.this, QuickLearnGempa.class);
-                startActivity(gempa);
+                Intent intent = new Intent(getActivity(), QuickLearnGempa.class);
+                getActivity().startActivity(intent);
             }
         });
-        btnCalling = (ImageButton) findViewById(R.id.btnCall);
-        btnCalling.setOnClickListener(new View.OnClickListener() {
+        btnQuick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent calling = new Intent(Activity_Dashboard_Quick.this, Emergency_Call.class);
-                startActivity(calling);
-            }
-        });
-        btnMessage = (ImageButton) findViewById(R.id.btnPesan);
-        btnMessage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent pesan = new Intent(Activity_Dashboard_Quick.this, TanyaJawab.class);
-                startActivity(pesan);
+                Intent intent = new Intent(getActivity(), Activity_Dashboard_Learn.class);
+                getActivity().startActivity(intent);
             }
         });
 
-        textSearch = (EditText) findViewById(R.id.input);
+
     }
+
 }

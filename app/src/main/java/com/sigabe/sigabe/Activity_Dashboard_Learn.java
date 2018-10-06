@@ -24,21 +24,21 @@ public class Activity_Dashboard_Learn extends AppCompatActivity {
                 startActivity(quick);
             }
         });
-        btnCalling = (ImageButton) findViewById(R.id.btnCall);
-        btnCalling.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent calling = new Intent(Activity_Dashboard_Learn.this, Emergency_Call.class);
-                startActivity(calling);
-            }
-        });
-        btnMessage = (ImageButton) findViewById(R.id.btnPesan);
-        btnMessage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent pesan = new Intent(Activity_Dashboard_Learn.this, TanyaJawab.class);
-                startActivity(pesan);
-            }
-        });
+//        btnCalling = (ImageButton) findViewById(R.id.btnCall);
+//        btnCalling.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent calling = new Intent(Activity_Dashboard_Learn.this, Emergency_Call.class);
+//                startActivity(calling);
+//            }
+//        });
+//        btnMessage = (ImageButton) findViewById(R.id.btnPesan);
+//        btnMessage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent pesan = new Intent(Activity_Dashboard_Learn.this, TanyaJawab.class);
+//                startActivity(pesan);
+//            }
+//        });
     }
 }
