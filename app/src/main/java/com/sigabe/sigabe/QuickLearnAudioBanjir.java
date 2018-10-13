@@ -3,11 +3,11 @@ package com.sigabe.sigabe;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class TanyaJawab extends AppCompatActivity {
+public class QuickLearnAudioBanjir extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tanya_jawab);
+        setContentView(R.layout.activity_quick_learn_audiogempa);
     }
 }
