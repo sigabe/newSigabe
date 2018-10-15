@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Dashboard extends Fragment {
-
+public class Contact extends Fragment {
+    @Nullable
+    @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_dashboard, null);
+        return inflater.inflate(R.layout.activity_contact,null);
     }
 }
