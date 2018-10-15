@@ -6,4 +6,5 @@
     <string name="title_call">Emergency Call</string>
     <string name="title_chat">Chat</string>
     <string name="title_logout">Logout</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

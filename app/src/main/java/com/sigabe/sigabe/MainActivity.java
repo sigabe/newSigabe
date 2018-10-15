@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Fragment fragment = null;
         switch (item.getItemId()){
-                case R.id.navigation_logout:
-                fragment = new Login();
+                case R.id.navigation_home:
+                fragment = new Dashboard();
                 break;
 
         }
