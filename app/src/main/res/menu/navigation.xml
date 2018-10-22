@@ -9,18 +9,17 @@
     <item
         android:id="@+id/navigation_call"
         android:icon="@drawable/ic_call_black_24dp"
-        android:title="Call" />
+        android:title="@string/title_call" />
 
     <item
-        android:id="@+id/navigation_chat"
-        android:icon="@drawable/ic_chat_black_24dp"
-        android:title="Chat" />
+        android:id="@+id/navigation_contact"
+        android:icon="@drawable/ic_contacts_black_24dp"
+        android:title="@string/title_contact" />
 
     <item
-        android:id="@+id/navigation_logout"
-        android:icon="@drawable/ic_lock_outline_black_24dp"
-        android:title="Logout" />
-
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="@string/title_profile" />
 
 
 </menu>

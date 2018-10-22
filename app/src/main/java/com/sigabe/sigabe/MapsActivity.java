@@ -1,14 +1,24 @@
 package com.sigabe.sigabe;
 
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Build;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -20,6 +30,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -117,6 +128,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+
+            @Override
+            public void onMapClick(final LatLng point) {
+                //Hapus Marker lama jika sebelumnya terdapat marker
+                if (mCurrLocationMarker != null) {
+                    mCurrLocationMarker.remove();
+                }
+                //Buat Marker baru
+                MarkerOptions marker = new MarkerOptions().position( new LatLng(point.latitude, point.longitude)).title("Lokasi saya").icon(BitmapDescriptorFactory.fromBitmap(getMarkerBitmapFromView(R.drawable.user1)));
+                mCurrLocationMarker = mMap.addMarker(marker);
+                //Masukan baris kode selanjutnya disini
+                String latid = String.valueOf(point.latitude);
+                String longtid = String.valueOf(point.longitude);
+                Toast.makeText(MapsActivity.this, "Lat : "+latid+" Long : "+longtid, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         //menghentikan pembaruan lokasi
         if (mGoogleApiClient != null) {
             LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
@@ -170,5 +199,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return;
             }
         }
+    }
+    private Bitmap getMarkerBitmapFromView(@DrawableRes int resId) {
+
+        View customMarkerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.activity_custom_marker, null);
+        ImageView markerImageView = (ImageView) customMarkerView.findViewById(R.id.user_dp);
+        markerImageView.setImageResource(resId);
+        customMarkerView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        customMarkerView.layout(0, 0, customMarkerView.getMeasuredWidth(), customMarkerView.getMeasuredHeight());
+        customMarkerView.buildDrawingCache();
+        Bitmap returnedBitmap = Bitmap.createBitmap(customMarkerView.getMeasuredWidth(), customMarkerView.getMeasuredHeight(),
+                Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(returnedBitmap);
+        canvas.drawColor(Color.WHITE, PorterDuff.Mode.SRC_IN);
+        Drawable drawable = customMarkerView.getBackground();
+        if (drawable != null)
+            drawable.draw(canvas);
+        customMarkerView.draw(canvas);
+        return returnedBitmap;
     }
 }

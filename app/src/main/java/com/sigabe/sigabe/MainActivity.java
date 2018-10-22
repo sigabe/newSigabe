@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
+
+        loadFragment(new Dashboard());
     }
 
     private boolean loadFragment(Fragment fragment){
@@ -36,10 +38,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Fragment fragment = null;
         switch (item.getItemId()){
-                case R.id.navigation_home:
+            case R.id.navigation_home:
                 fragment = new Dashboard();
                 break;
-
+            case R.id.navigation_call:
+                fragment = new Emergency();
+                break;
+            case R.id.navigation_profile:
+                fragment = new Profile();
+                break;
+//            case R.id.navigation_logout:
+//                fragment = new Login();
+//                break;
         }
         return loadFragment(fragment);
     }
