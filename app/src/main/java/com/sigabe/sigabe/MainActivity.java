@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
+
+        loadFragment(new Dashboard());
     }
 
     private boolean loadFragment(Fragment fragment){
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Fragment fragment = null;
         switch (item.getItemId()){
+<<<<<<< HEAD
                 case R.id.navigation_home:
                     fragment = new Dashboard();
                 break;
@@ -47,8 +50,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
                 case R.id.navigation_profile:
                     fragment = new Profile();
+=======
+            case R.id.navigation_home:
+                fragment = new Dashboard();
+>>>>>>> a538ad78be72185aed63f97add3ca7b15410fa1b
                 break;
-
+            case R.id.navigation_call:
+                fragment = new Emergency();
+                break;
+            case R.id.navigation_profile:
+                fragment = new Profile();
+                break;
+//            case R.id.navigation_logout:
+//                fragment = new Login();
+//                break;
         }
         return loadFragment(fragment);
     }
