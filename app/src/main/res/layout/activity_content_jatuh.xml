@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContentJatuh">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="345dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="13dp">
+                <RelativeLayout
+                    android:layout_width="345dp"
+                    android:layout_height="140dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/tJatuh1"
+                        android:layout_width="310dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="77dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Cek badan kita, apakah ada yang sakit, luka, atau bahkan ada yang hilang."/>
+                    <View
+                        android:layout_below="@+id/tJatuh1"
+                        android:layout_width="310dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="345dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="135dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/tJatuh2"
+                        android:layout_width="310dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="77dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Jika tubuh baik-baik saja, maka hal selanjutnya yang perlu dilakukan adalah menjauh dari TKP. Motor atau mobil ada kelistrikannya, dikhawatirkan bisa meledak."/>
+                    <View
+                        android:layout_below="@+id/tJatuh2"
+                        android:layout_width="310dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="345dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="327dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/tJatuh3"
+                        android:layout_width="310dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="77dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Bila tubuh masih kuat dan baik-baik saja, bangunin motor dan bawa ke pinggir jalan dan cek kondisi motor."/>
+                    <View
+                        android:layout_below="@+id/tJatuh3"
+                        android:layout_width="330dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="345dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="481dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/tJatuh4"
+                        android:layout_width="310dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="77dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Telepon teman atau kerabat terdekat untuk meminta bantuan."/>
+                </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="345dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="560dp">
+            </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

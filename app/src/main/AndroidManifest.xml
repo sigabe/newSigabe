@@ -3,6 +3,8 @@
     package="com.sigabe.sigabe">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,26 +13,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOU_KEY" />
+
         <activity android:name=".Login" />
-        <activity android:name=".SignUp" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main" />
-        <activity
-            android:name=".SplashScreen"
-            android:label="@string/app_name"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Dashboard">
+        <activity android:name=".SignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".SurvivalGuide"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Dashboard" />
         <activity android:name=".Profile" />
-        <activity android:name=".Emergency"></activity>
+        <activity android:name=".Emergency" />
         <activity android:name=".Contact"></activity>
+        <activity android:name=".SurvivalDashboard"></activity>
+        <activity android:name=".SurvivalDashboard2" />
+        <activity android:name=".ContentAlam" />
+        <activity android:name=".ContentBanjir" />
+        <activity android:name=".ContentBanjir2" />
+        <activity android:name=".ContentGempa" />
+        <activity android:name=".ContentGempa2" />
+        <activity android:name=".ContentKebakaran" />
+        <activity android:name=".ContentBakar2" />
+        <activity android:name=".ContentBeliung" />
+        <activity android:name=".ContentBukanAlam" />
+        <activity android:name=".ContentJatuh"></activity>
     </application>
 
 </manifest>

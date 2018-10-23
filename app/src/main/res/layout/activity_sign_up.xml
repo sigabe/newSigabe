@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="#0099FF">
+        android:background="@drawable/rectangle">
 
         <ImageView
             android:layout_width="150dp"

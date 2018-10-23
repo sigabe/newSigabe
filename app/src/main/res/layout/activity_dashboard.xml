@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="#0099FF">
+        android:background="@drawable/rectangle">
         <ImageButton
             android:id="@+id/btnUser"
             android:layout_width="50dp"
@@ -74,6 +74,7 @@
             android:layout_height="295dp"
             android:background="#FFFFFF">
             <ImageView
+                android:id="@+id/survival"
                 android:layout_width="159dp"
                 android:layout_height="197dp"
                 android:background="@drawable/buku"

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContentGempa">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+        <Button
+            android:id="@+id/btnTerjadiGempa"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:width="10dp"
+            android:layout_marginLeft="47dp"
+            android:background="#fc049d"
+            android:layout_marginTop="13dp"
+            android:text="Terjadi"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"/>
+        <Button
+            android:id="@+id/btnAfterGempa"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:width="10dp"
+            android:layout_toRightOf="@+id/btnTerjadiGempa"
+            android:background="#dce8ea"
+            android:layout_marginTop="13dp"
+            android:text="Setelah"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="17sp"/>
+        <ScrollView
+            android:layout_below="@id/btnTerjadiGempa"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="47dp"
+                android:layout_marginTop="13dp">
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="175dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/textGempa1"
+                        android:layout_width="275dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="77dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Usahakan untuk tetap tenang, biasanya kerumunan orang dalam bencana berpotensi kepanikan."/>
+                    <View
+                        android:layout_below="@id/textGempa1"
+                        android:layout_width="280dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="152dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/textGempa2"
+                        android:layout_width="275dp"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="77dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Berusahalah menyelamatkan diri dan menyelamatkan keluarga Anda."/>
+                    <View
+                        android:layout_below="@+id/textGempa2"
+                        android:layout_width="280dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="287dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/textGempa3"
+                        android:layout_width="275dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="77dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Berlindunglah di bawah meja agar tubuh tidak terkena benda-benda yang berjatuhan."/>
+                    <View
+                        android:layout_below="@+id/textGempa3"
+                        android:layout_width="280dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="440dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/textGempa4"
+                        android:layout_width="275dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="77dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Jika berada di luar bangunan,  bergeraklah menjauh dari gedung dan tiang menuju daerah terbuka."/>
+                    <View
+                        android:layout_below="@+id/textGempa4"
+                        android:layout_width="280dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="600dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/textGempa5"
+                        android:layout_width="275dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="77dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Jika berada di bangunan umum, jangan menggunakan lift namun namun gunakanlah tangga darurat, lalu bergeraklah ke tempat terbuka."/>
+                    <View
+                        android:layout_below="@+id/textGempa5"
+                        android:layout_width="280dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="786dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/textGempa6"
+                        android:layout_width="275dp"
+                        android:layout_height="98dp"
+                        android:layout_marginTop="77dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Jika berada di kendaraan, hentikan mesin atau minta pengemudi anda untuk menghentikan kendaraan, lalu keluarlah dari kendaraan."/>
+                    <View
+                        android:layout_below="@+id/textGempa6"
+                        android:layout_width="280dp"
+                        android:layout_height="5dp"
+                        android:background="#d9d9d9" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="969dp">
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/school" />
+                    <TextView
+                        android:id="@+id/textGempa7"
+                        android:layout_width="275dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="77dp"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        android:textColor="#000000"
+                        android:text="Jika berada di pegunungan, bergeraklah ke tempat yang aman seperti lapangan terbuka yang jauh dari daerah lereng. "/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="1045dp">
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
