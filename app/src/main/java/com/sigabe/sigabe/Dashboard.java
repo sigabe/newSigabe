@@ -1,5 +1,6 @@
 package com.sigabe.sigabe;
 
+<<<<<<< HEAD
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -7,6 +8,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+=======
+<<<<<<< HEAD
+=======
+import android.content.Intent;
+>>>>>>> a538ad78be72185aed63f97add3ca7b15410fa1b
+>>>>>>> 9f1cafc53f9917984dab4d7bd3ac5425851ac219
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationCompat;
@@ -15,6 +22,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+import android.widget.ImageView;
+
+public class Dashboard extends Fragment {
+
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_dashboard, null);
+    }
+=======
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -68,7 +84,13 @@ public class Dashboard extends Fragment {
                 .setContentTitle("Notification Android")
                 .setContentText("Sigabe");
 
+<<<<<<< HEAD
         notificationManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(115, builder.build());
     }
 }
+=======
+        }
+>>>>>>> a538ad78be72185aed63f97add3ca7b15410fa1b
+}
+>>>>>>> 9f1cafc53f9917984dab4d7bd3ac5425851ac219

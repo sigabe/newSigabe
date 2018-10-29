@@ -31,18 +31,47 @@
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".SurvivalGuide"
+            android:label="@string/title_activity_main" />
+        <activity
             android:name=".SplashScreen"
             android:label="@string/app_name"
             android:noHistory="true"
+<<<<<<< HEAD
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+=======
+
+            android:screenOrientation="portrait" />
+            <activity android:name=".Dashboard" />
+            <activity android:name=".Profile" />
+            <activity android:name=".Emergency" />
+            <activity android:name=".Contact"></activity>
+            <activity android:name=".SurvivalDashboard"></activity>
+            <activity android:name=".SurvivalDashboard2" />
+            <activity android:name=".ContentAlam" />
+            <activity android:name=".ContentBanjir" />
+            <activity android:name=".ContentBanjir2" />
+            <activity android:name=".ContentGempa" />
+            <activity android:name=".ContentGempa2" />
+            <activity android:name=".ContentKebakaran" />
+            <activity android:name=".ContentBakar2" />
+            <activity android:name=".ContentBeliung" />
+            <activity android:name=".ContentBukanAlam" />
+            <activity android:name=".ContentJatuh"></activity>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> 9f1cafc53f9917984dab4d7bd3ac5425851ac219
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

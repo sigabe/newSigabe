@@ -10,7 +10,21 @@ import android.view.ViewGroup;
 
 public class Profile extends Fragment {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_profile,null);
+    }
+=======
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_profile);
+//    }
+>>>>>>> 9f1cafc53f9917984dab4d7bd3ac5425851ac219
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle saveInstance){
             return inflater.inflate(R.layout.activity_profile,null );
         }
+>>>>>>> a538ad78be72185aed63f97add3ca7b15410fa1b
 }

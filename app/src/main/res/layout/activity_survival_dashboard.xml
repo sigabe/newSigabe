@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SurvivalDashboard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dash2"/>
+        <RelativeLayout
+            android:layout_width="330dp"
+            android:layout_height="175dp"
+            android:background="#d8ffffff"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="15dp">
+            <ImageButton
+                android:id="@+id/btnNonAlam"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="145dp"
+                android:background="@drawable/play"/>
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:text="Bukan Bencana Alam"
+                android:textSize="29sp"
+                android:layout_marginTop="54dp"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textColor="#1267f1"/>
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:text="Berisi kumpulan content survival bukan bencana alam."
+                android:textSize="20sp"
+                android:layout_marginTop="93dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"/>
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:background="@drawable/next"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="260dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
