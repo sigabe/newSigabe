@@ -18,35 +18,12 @@
         <RelativeLayout
             android:id="@+id/rl"
             android:layout_width="match_parent"
-            android:layout_height="212dp"
-            android:background="@drawable/rectangle">
-
-            <ImageView
-                android:id="@+id/btnBack"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/ic_arrow_back_black_24dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="20dp"
-                android:text="Pasca Bencana"
-                android:textAlignment="center"
-                android:textColor="@color/colorContent"
-                android:textSize="28dp"
-                android:textStyle="bold" />
+            android:layout_height="212dp">
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true" />
+                android:layout_height="match_parent" />
 
         </RelativeLayout>
 
@@ -624,14 +601,5 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
-        android:src="@drawable/ic_home_black_24dp" />
 
 </RelativeLayout>

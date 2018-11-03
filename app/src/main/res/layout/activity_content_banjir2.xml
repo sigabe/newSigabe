@@ -4,203 +4,254 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContentBanjir2">
-
+    tools:context=".ContentBanjir2"
+    android:background="#36bab3b3">
     <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@drawable/rectangle">
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Banjir"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/r1"
+        android:background="#FFFFFF">
+        <TextView
+            android:id="@+id/befBanjir"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:text="Saat Terjadi"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/afBanjir"
+            android:layout_toRightOf="@id/befBanjir"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:text="Setelah Bencana"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#0372fa"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/rl2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF">
-        <Button
-            android:id="@+id/btnTerjadiBanjir2"
-            android:layout_width="130dp"
-            android:layout_height="50dp"
-            android:width="10dp"
-            android:layout_marginLeft="47dp"
-            android:background="#dce8ea"
-            android:layout_marginTop="13dp"
-            android:text="Terjadi"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:textSize="17sp"/>
-        <Button
-            android:id="@+id/btnAfterBanjir2"
-            android:layout_width="130dp"
-            android:layout_height="50dp"
-            android:width="10dp"
-            android:layout_toRightOf="@+id/btnTerjadiBanjir2"
-            android:background="#03caf2"
-            android:layout_marginTop="13dp"
-            android:text="Setelah"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="17sp"/>
+        android:layout_marginTop="10dp">
         <ScrollView
-            android:layout_below="@id/btnTerjadiBanjir2"
-            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <RelativeLayout
-                android:layout_width="280dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="47dp"
-                android:layout_marginTop="13dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/textB1"
-                        android:layout_width="275dp"
-                        android:layout_height="63dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Jika mengungsi, kembalilah ke rumah jika keadaan sudah benar-benar aman."/>
-                    <View
-                        android:layout_below="@id/textB1"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+                    <RelativeLayout
+                        android:layout_width="346dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_homes" />
+                        <TextView
+                            android:layout_toRightOf="@id/img1"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Jika mengungsi, kembalilah ke rumah jika keadaan sudah benar-benar aman."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="143dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/textB2"
-                        android:layout_width="275dp"
-                        android:layout_height="69dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Jangan langsung masuk ke dalam rumah, lihatlah situasi dengan saksama."/>
-                    <View
-                        android:layout_below="@+id/textB2"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="170dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_bahaya" />
+                        <TextView
+                            android:layout_toRightOf="@id/img2"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Jangan langsung masuk ke dalam rumah, lihatlah situasi dengan saksama."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="230dp"
-                    android:layout_marginTop="300dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="4dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/textB3"
-                        android:layout_width="275dp"
-                        android:layout_height="130dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Periksalah lingkungan sekitar rumah kalau-kalau ada bahaya yang tersembunyi, seperti bagian rumah yang roboh, kabel beraliran listrik, bocoran gas, atau binatang berbahaya."/>
-                    <View
-                        android:layout_below="@+id/textB3"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="340dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_warning" />
+                        <TextView
+                            android:layout_toRightOf="@id/img3"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Periksalah lingkungan sekitar rumah kalau-kalau ada bahaya yang tersembunyi."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="140dp"
-                    android:layout_marginTop="518dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="4dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/textB4"
-                        android:layout_width="275dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Gunakan selalu alas kaki."/>
-                    <View
-                        android:layout_below="@+id/textB4"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="510dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_sepatu" />
+                        <TextView
+                            android:layout_toRightOf="@id/img4"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Gunakan selalu alas kaki."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="145dp"
-                    android:layout_marginTop="630dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="4dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/textB5"
-                        android:layout_width="275dp"
-                        android:layout_height="45dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Mulailah membersihkan rumah dan lingkungan sekitar Anda."/>
-                    <View
-                        android:layout_below="@+id/textB5"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="680dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_cleaning" />
+                        <TextView
+                            android:layout_toRightOf="@id/img5"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Mulailah membersihkan rumah dan lingkungan sekitar Anda."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="145dp"
-                    android:layout_marginTop="758dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="4dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/textB6"
-                        android:layout_width="275dp"
-                        android:layout_height="45dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Cucilah perlengkapan makan dan barang lainnya dengan sabun anti kuman."/>
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="850dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img6"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_washing" />
+                        <TextView
+                            android:layout_toRightOf="@id/img6"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Cucilah perlengkapan makan dan barang lainnya dengan sabun anti kuman."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="770dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="870dp">
                 </RelativeLayout>
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>
-
 </RelativeLayout>

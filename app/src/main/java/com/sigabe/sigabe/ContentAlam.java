@@ -40,14 +40,5 @@ public class ContentAlam extends AppCompatActivity {
                 startActivity(bakar);
             }
         });
-
-        btnPBeliung = findViewById(R.id.btnPBeliung);
-        btnPBeliung.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent beliung = new Intent(ContentAlam.this, ContentBeliung.class);
-                startActivity(beliung);
-            }
-        });
     }
 }

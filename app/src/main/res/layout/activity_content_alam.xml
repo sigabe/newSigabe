@@ -16,7 +16,7 @@
             android:layout_marginTop="130dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="290dp"
+                android:layout_height="299dp"
                 android:layout_marginTop="6dp"
                 android:orientation="vertical"
                 tools:ignore="MissingConstraints"
@@ -25,7 +25,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="287dp"
+                    android:layout_height="298dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginLeft="10dp"
@@ -33,7 +33,7 @@
 
                     <HorizontalScrollView
                         android:layout_width="wrap_content"
-                        android:layout_height="285dp"
+                        android:layout_height="297dp"
                         android:paddingBottom="10dp">
 
                         <LinearLayout
@@ -45,8 +45,8 @@
                                 android:layout_height="wrap_content">
                                 <ImageButton
                                     android:id="@+id/btnKebanjiran"
-                                    android:layout_width="180dp"
-                                    android:layout_height="260dp"
+                                    android:layout_width="200dp"
+                                    android:layout_height="290dp"
                                     android:background="@drawable/banjir"/>
                             </LinearLayout>
 
@@ -56,8 +56,8 @@
                                 android:layout_marginLeft="15dp">
                                 <ImageButton
                                     android:id="@+id/btnGempaBumi"
-                                    android:layout_width="180dp"
-                                    android:layout_height="260dp"
+                                    android:layout_width="200dp"
+                                    android:layout_height="290dp"
                                     android:background="@drawable/gempa"/>
                             </LinearLayout>
 
@@ -67,8 +67,8 @@
                                 android:layout_marginLeft="15dp">
                                 <ImageButton
                                     android:id="@+id/btnKebakaran"
-                                    android:layout_width="180dp"
-                                    android:layout_height="260dp"
+                                    android:layout_width="200dp"
+                                    android:layout_height="290dp"
                                     android:background="@drawable/kebakaran"/>
                             </LinearLayout>
 
@@ -78,8 +78,8 @@
                                 android:layout_marginLeft="15dp">
                                 <ImageButton
                                     android:id="@+id/btnPBeliung"
-                                    android:layout_width="180dp"
-                                    android:layout_height="260dp"
+                                    android:layout_width="200dp"
+                                    android:layout_height="290dp"
                                     android:background="@drawable/angin"/>
                             </LinearLayout>
 
@@ -88,9 +88,16 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp">
                                 <ImageButton
-                                    android:layout_width="180dp"
-                                    android:layout_height="260dp"
-                                    android:background="@drawable/tsuna"/>
+                                    android:layout_width="200dp"
+                                    android:layout_height="290dp"
+                                    android:background="@drawable/tsuna" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="10dp">
                             </LinearLayout>
 
                         </LinearLayout>

@@ -4,203 +4,223 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContentBanjir">
-
+    tools:context=".ContentBanjir"
+    android:background="#36bab3b3">
     <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@drawable/rectangle">
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Banjir"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/r1"
+        android:background="#FFFFFF">
+        <TextView
+            android:id="@+id/befBanjir"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:text="Saat Terjadi"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:textSize="19sp"
+            android:textColor="#0372fa"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/afBanjir"
+            android:layout_toRightOf="@id/befBanjir"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:text="Setelah Bencana"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/rl2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF">
-        <Button
-            android:id="@+id/btnTerjadiBanjir"
-            android:layout_width="130dp"
-            android:layout_height="50dp"
-            android:width="10dp"
-            android:layout_marginLeft="47dp"
-            android:background="#03caf2"
-            android:layout_marginTop="13dp"
-            android:text="Terjadi"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="17sp"/>
-        <Button
-            android:id="@+id/btnAfterBanjir"
-            android:layout_width="130dp"
-            android:layout_height="50dp"
-            android:width="10dp"
-            android:layout_toRightOf="@+id/btnTerjadiBanjir"
-            android:background="#dce8ea"
-            android:layout_marginTop="13dp"
-            android:text="Setelah"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:textSize="17sp"/>
+        android:layout_marginTop="10dp">
         <ScrollView
-            android:layout_below="@id/btnTerjadiBanjir"
-            android:layout_marginTop="6dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <RelativeLayout
-                android:layout_width="280dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="47dp"
-                android:layout_marginTop="13dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:layout_width="275dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Pindahkan barang-barang atau perabotan rumah ke tempat yang lebih tinggi dan tidak terjangkau oleh genangan air."/>
-                    <View
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:layout_marginBottom="3dp"
-                        android:layout_marginTop="169dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+                    <RelativeLayout
+                        android:layout_width="346dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_barang" />
+                        <TextView
+                            android:layout_toRightOf="@id/img1"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Pindahkan barang-barang atau perabotan rumah ke tempat yang lebih tinggi dan tidak terjangkau oleh genangan air."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="175dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/banjir2"
-                        android:layout_width="275dp"
-                        android:layout_height="52dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Segera padamkan listrik dan gas di rumah."/>
-                    <View
-                        android:layout_below="@+id/banjir2"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="170dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_listrik" />
+                        <TextView
+                            android:layout_toRightOf="@id/img2"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Segera padamkan listrik dan gas di rumah."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="310dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="4dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/banjir3"
-                        android:layout_width="275dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Perhatikan kondisi air, apakah terus meningkat atau tidak."/>
-                    <View
-                        android:layout_below="@+id/banjir3"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="340dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_air" />
+                        <TextView
+                            android:layout_toRightOf="@id/img3"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Perhatikan kondisi air, apakah terus meningkat atau tidak."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="443dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/banjir4"
-                        android:layout_width="275dp"
-                        android:layout_height="70dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Jika ada imbauan mengungsi, segera lakukan dengan tetap tenang dan tertib."/>
-                    <View
-                        android:layout_below="@+id/banjir4"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="510dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_tenda" />
+                        <TextView
+                            android:layout_toRightOf="@id/img5"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Jika ada imbauan mengungsi, segera lakukan dengan tetap tenang dan tertib."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="593dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/banjir5"
-                        android:layout_width="275dp"
-                        android:layout_height="70dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Jika hujan tidak berhenti dan air makin meningkat, segeralah mengungsi ke tempat yang aman."/>
-                    <View
-                        android:layout_below="@+id/banjir5"
-                        android:layout_width="280dp"
-                        android:layout_height="5dp"
-                        android:background="#d9d9d9" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="680dp">
+                    <RelativeLayout
+                        android:layout_width="339dp"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="#FFFFFF">
+                        <ImageView
+                            android:id="@+id/img6"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_hubungi" />
+                        <TextView
+                            android:layout_toRightOf="@id/img6"
+                            android:layout_width="210dp"
+                            android:layout_height="128dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginLeft="13dp"
+                            android:text="Jika terjebak dalam rumah, cobalah untuk tenang dan berusahalah untuk mencari pertolongan."
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
                 </RelativeLayout>
                 <RelativeLayout
-                    android:layout_width="280dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="749dp">
-                    <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/school" />
-                    <TextView
-                        android:id="@+id/banjir6"
-                        android:layout_width="275dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="77dp"
-                        android:textSize="17sp"
-                        android:textStyle="normal"
-                        android:textColor="#000000"
-                        android:text="Jika terjebak dalam rumah, cobalah untuk tenang dan berusahalah untuk mencari pertolongan dengan menghubungi kerabat, PMI, kantor pemerintah, atau polisi."/>
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="700dp">
                 </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="280dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="820dp">
-            </RelativeLayout>
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>
-
 </RelativeLayout>

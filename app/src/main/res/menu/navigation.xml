@@ -13,7 +13,6 @@
 
     <item
         android:id="@+id/navigation_contact"
-<<<<<<< HEAD
         android:icon="@drawable/ic_contact"
         android:title="Contact" />
 
@@ -21,16 +20,6 @@
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile"
         android:title="Profile" />
-
-=======
-        android:icon="@drawable/ic_contacts_black_24dp"
-        android:title="@string/title_contact" />
-
-    <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_account_circle_black_24dp"
-        android:title="@string/title_profile" />
->>>>>>> a538ad78be72185aed63f97add3ca7b15410fa1b
 
 
 </menu>

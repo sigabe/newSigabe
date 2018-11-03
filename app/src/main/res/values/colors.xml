@@ -8,4 +8,6 @@
     <color name="colorContentQ">#11b3dc</color>
     <color name="colorContent">#fffcfc</color>
     <color name="abu">#d0e9e6e6</color>
+    <color name="backgroundTab">#ecf0f1</color>
+    <color name="tabIndicators">#3498db</color>
 </resources>

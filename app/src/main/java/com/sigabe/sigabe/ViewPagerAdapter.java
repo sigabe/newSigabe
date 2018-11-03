@@ -13,7 +13,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     private LayoutInflater layoutInflater;
 
-    private Integer[] images = {R.drawable.cityscape, R.drawable.home, R.drawable.beachh};
+    private Integer[] images = {R.drawable.slide1, R.drawable.slide2};
 
     public ViewPagerAdapter(Context context) {
         this.context = context;

@@ -15,8 +15,8 @@
             android:background="@drawable/tsunami"/>
         <RelativeLayout
             android:layout_width="330dp"
-            android:layout_height="175dp"
-            android:background="#d0ffffff"
+            android:layout_height="match_parent"
+            android:background="#afffffff"
             android:layout_marginTop="380dp"
             android:layout_marginLeft="15dp">
 
@@ -39,10 +39,11 @@
                 android:textStyle="bold"
                 android:textColor="#1267f1"/>
             <TextView
-                android:layout_width="290dp"
-                android:layout_height="70dp"
-                android:text="Berisi kumpulan content survival saat dan pasca terjadi bencana alam"
-                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_height="150dp"
+                android:text="Pada halaman ini, akan berisi konten-konten survival mengenai apa yang harus kita lakukan ketika terjadi bencana alam dan setelah bencana alam terjadi."
+                android:textSize="19sp"
                 android:layout_marginTop="93dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#000000"/>
