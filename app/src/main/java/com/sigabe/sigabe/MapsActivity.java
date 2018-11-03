@@ -36,26 +36,33 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
+public class MapsActivity extends FragmentActivity implements
+        OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener, LocationListener {
+        GoogleApiClient.OnConnectionFailedListener
+        {
 
     private GoogleMap mMap;
+    private BackgroundService backgroundService;
     GoogleApiClient mGoogleApiClient;
-    private LocationRequest mLocationRequest;
-    private Marker mCurrLocationMarker;
-    private Location mLastLocation;
 
+    private Location mlocation;
+    double latitude, longitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+
+        backgroundService = new BackgroundService(getApplicationContext());
+        mlocation = backgroundService.getLocation();
+
+        latitude = mlocation.getLatitude();
+        longitude = mlocation.getLongitude();
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
 
     /**
      * Manipulates the map once available.
@@ -70,10 +77,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-//        LatLng sydney = new LatLng(-34, 151);
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this,
                     android.Manifest.permission.ACCESS_FINE_LOCATION)
@@ -86,6 +89,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
+        LatLng position = new LatLng(latitude,longitude);
+        mMap.addMarker(new MarkerOptions().position(position).title("Lokasi saya").icon(BitmapDescriptorFactory.fromBitmap(getMarkerBitmapFromView(R.drawable.user1))));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(position));
     }
 
     private void buildGoogleApiClient() {
@@ -95,15 +101,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
-        LocationRequest mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(1000);
-        mLocationRequest.setFastestInterval(1000);
-        mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-        if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED) {
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
-        }
     }
 
     @Override
@@ -116,55 +113,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    @Override
-    public void onLocationChanged(Location location) {
-        mLastLocation = location;
-        if (mCurrLocationMarker != null) {
-            mCurrLocationMarker.remove();
-        }
-        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(latLng.latitude, latLng.longitude)).zoom(16).build();
-
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-
-        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-
-            @Override
-            public void onMapClick(final LatLng point) {
-                //Hapus Marker lama jika sebelumnya terdapat marker
-                if (mCurrLocationMarker != null) {
-                    mCurrLocationMarker.remove();
-                }
-                //Buat Marker baru
-                MarkerOptions marker = new MarkerOptions().position( new LatLng(point.latitude, point.longitude)).title("Lokasi saya").icon(BitmapDescriptorFactory.fromBitmap(getMarkerBitmapFromView(R.drawable.user1)));
-                mCurrLocationMarker = mMap.addMarker(marker);
-                //Masukan baris kode selanjutnya disini
-                String latid = String.valueOf(point.latitude);
-                String longtid = String.valueOf(point.longitude);
-                Toast.makeText(MapsActivity.this, "Lat : "+latid+" Long : "+longtid, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        //menghentikan pembaruan lokasi
-        if (mGoogleApiClient != null) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-        }
-    }
-
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     public boolean checkLocationPermission(){
-        if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION)) {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.ACCESS_FINE_LOCATION)) {
+                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                         MY_PERMISSIONS_REQUEST_LOCATION);
             } else {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                         MY_PERMISSIONS_REQUEST_LOCATION);
             }
             return false;
@@ -179,8 +136,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // Izin diberikan.
                     if (ContextCompat.checkSelfPermission(this,
                             android.Manifest.permission.ACCESS_FINE_LOCATION)
                             == PackageManager.PERMISSION_GRANTED) {
@@ -192,14 +147,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
 
                 } else {
-
-                    // Izin ditolak.
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
                 return;
             }
         }
     }
+
     private Bitmap getMarkerBitmapFromView(@DrawableRes int resId) {
 
         View customMarkerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.activity_custom_marker, null);
