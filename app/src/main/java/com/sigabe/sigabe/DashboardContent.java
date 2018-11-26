@@ -11,6 +11,8 @@ import android.widget.TextView;
 public class DashboardContent extends AppCompatActivity {
     TextView textSos;
     LinearLayout btnBanjir;
+    LinearLayout btnGempa;
+    LinearLayout btnKebakaran;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,22 @@ public class DashboardContent extends AppCompatActivity {
             public void onClick(View view) {
                 Intent banjir = new Intent(DashboardContent.this, ContentBanjir.class);
                 startActivity(banjir);
+            }
+        });
+        btnGempa = findViewById(R.id.btnGempa);
+        btnGempa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gempa = new Intent(DashboardContent.this, ContentGempa.class);
+                startActivity(gempa);
+            }
+        });
+        btnKebakaran = findViewById(R.id.btnKebakaran);
+        btnKebakaran.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent kebakaran = new Intent(DashboardContent.this, ContentBakar.class);
+                startActivity(kebakaran);
             }
         });
     }

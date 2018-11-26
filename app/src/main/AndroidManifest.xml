@@ -55,12 +55,13 @@
         <activity android:name=".SurvivalDashboard" />
         <activity android:name=".SurvivalDashboard2" />
         <activity android:name=".ContentAlam" />
-        <activity android:name=".ContentBanjir" />
+        <activity android:name=".ContentBakar" />
+        <activity android:name=".ContentBakar2" />
+        <activity android:name=".ContentBanjir" />                                                                                                      
         <activity android:name=".ContentBanjir2" />
         <activity android:name=".ContentGempa" />
         <activity android:name=".ContentGempa2" />
         <activity android:name=".ContentKebakaran" />
-        <activity android:name=".ContentBakar2" />
         <activity android:name=".ContentBukanAlam" />
         <activity android:name=".ContentJatuh" />
         <activity android:name=".Dashboard" />

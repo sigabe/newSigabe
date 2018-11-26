@@ -58,7 +58,7 @@
                                     android:id="@+id/btnGempaBumi"
                                     android:layout_width="200dp"
                                     android:layout_height="290dp"
-                                    android:background="@drawable/gempa"/>
+                                    android:background="@drawable/icon_gempa"/>
                             </LinearLayout>
 
                             <LinearLayout
